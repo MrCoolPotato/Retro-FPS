@@ -181,9 +181,9 @@ class NPC(AnimatedSprite):
         return False
 
     def draw_ray_cast(self):
-        pg.draw.circle(self.game.screen, 'red', (100 * self.x, 100 * self.y), 15)
+        pygame.draw.circle(self.game.screen, 'red', (100 * self.x, 100 * self.y), 15)
         if self.ray_cast_player_npc():
-            pg.draw.line(self.game.screen, 'orange', (100 * self.game.player.x, 100 * self.game.player.y),
+            pygame.draw.line(self.game.screen, 'orange', (100 * self.game.player.x, 100 * self.game.player.y),
                          (100 * self.x, 100 * self.y), 2)
 
 
